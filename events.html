@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Events – Williston Park Public Library</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+  <img
+    class="logo"
+    src="images/logo.jpg"            
+    alt="Williston Park Public Library logo">
+  <span class="brand-text">WPPL</span>
+</a>
+
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+        <li><a href="index.html">About WPPL</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<main id="main">
+
+    <section class="events-page" aria-labelledby="events-h1">
+  <div class="events-inner">
+    <h1 id="events-h1">Library Events</h1>
+    <img
+      class="events-hero-img"
+      src="images/authentic-book-club-scene.jpg"
+      alt="Four people sitting on a bench, smiling and reading books">
+  </div>
+</section>
+
+    <!-- View controls -->
+    <div class="events-controls">
+      <div class="month-nav" role="group" aria-label="Change month">
+        <button id="prevMonth" type="button" aria-controls="cal-grid">Previous month</button>
+        <h2 id="monthLabel" class="month-label" aria-live="polite"></h2>
+        <button id="nextMonth" type="button" aria-controls="cal-grid">Next month</button>
+      </div>
+
+      <div class="view-toggle" role="group" aria-label="Change view">
+        <button id="gridViewBtn" type="button" aria-pressed="true">Calendar</button>
+        <button id="listViewBtn" type="button" aria-pressed="false">List</button>
+      </div>
+    </div>
+
+    <!-- Calendar grid -->
+    <section id="calSection" aria-labelledby="calHeading">
+      <h3 id="calHeading" class="visually-hidden">Month grid</h3>
+      <table id="cal-grid" class="cal-grid">
+        <caption class="visually-hidden"></caption>
+        <thead>
+          <tr>
+            <th scope="col">Sun</th>
+            <th scope="col">Mon</th>
+            <th scope="col">Tue</th>
+            <th scope="col">Wed</th>
+            <th scope="col">Thu</th>
+            <th scope="col">Fri</th>
+            <th scope="col">Sat</th>
+          </tr>
+        </thead>
+        <tbody><!-- JS renders 6 rows x 7 cells --></tbody>
+      </table>
+    </section>
+
+    <!-- List view -->
+    <section id="listSection" aria-labelledby="listHeading" hidden>
+      <h3 id="listHeading" class="visually-hidden">Events list</h3>
+      <ul id="eventsList" class="events-list"><!-- JS renders --></ul>
+    </section>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Williston Park Public Library</p>
+  </footer>
+</body>
+</html>

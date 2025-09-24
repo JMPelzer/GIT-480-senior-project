@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Williston Park Public Library</title>
+   <meta name="author" content="Jennifer Pelzer">
+    <meta name="description" content="GIT 480 Senior website project">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+  
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+  <img
+    class="logo"
+    src="images/logo.jpg"            
+    alt="Williston Park Public Library logo">
+  <span class="brand-text">WPPL</span>
+</a>
+
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+        <li><a href="index.html" aria-current="page">About WPPL</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <!-- Home / About WPPL -->
+    <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+        <h1 id="hero-title">Welcome to Williston Park Public Library</h1>
+        <img class="hero-img" src="images/color-stack-book.jpg" alt="colorful stacked books close up image">
+        <p>Your community hub for learning, reading, and events.</p>
+        <a href="events.html" class="btn">View Upcoming Events</a>
+    </div>
+  </section>
+
+  <!-- Catalog prototype -->
+  <section class="catalog" aria-labelledby="search-title">
+    <div class="catalog-inner">
+    <h2 id="search-title">Search the Catalog</h2>
+
+    <form class="catalog-form" role="search" action="#" method="get">
+      <label  for="search" class="visually-hidden">Search the catalog</label>
+   <div class="field with-icon">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor"
+        d="M15.5 14h-.8l-.28-.28a6.5 6.5 0 1 0-1.41 1.41l.28.28v.8l4.75 4.75a1 1 0 0 0 1.41-1.41L15.5 14zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+    </svg>
+    <input type="search" id="search" name="search" placeholder="Enter title or author" autocomplete="off" />
+  </div>
+
+  <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p class="note">Prototype only, no live database connection.</p>
+    </div>
+  </section>
+
+  <!-- Event teasers -->
+<section class="events" aria-labelledby="events-title">
+  <div class="events-inner">
+    <h2 id="events-title">Upcoming Events</h2>
+     <ul class="event-list">
+  <li>
+    <a class="event-card" href="events.html#story-time">
+      <div class="event-meta">
+        <strong class="event-date"><time datetime="2025-03-12">Mar 12</time></strong>
+        <span class="event-time">10:00 AM</span>
+      </div>
+      <span class="event-title">Story Time for Kids</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="event-card" href="events.html#author-talk">
+      <div class="event-meta">
+        <strong class="event-date"><time datetime="2025-03-15">Mar 15</time></strong>
+        <span class="event-time">6:30 PM</span>
+      </div>
+      <span class="event-title">Author Talk: Local History</span>
+    </a>
+  </li>
+
+  <!-- NEW event -->
+  <li>
+    <a class="event-card" href="events.html#coding-club">
+      <div class="event-meta">
+        <strong class="event-date"><time datetime="2025-03-22">Mar 22</time></strong>
+        <span class="event-time">2:00 PM</span>
+      </div>
+      <span class="event-title">Kids Coding Club</span>
+    </a>
+  </li>
+</ul>
+    <p class="events-more"><a class="btn-link" href="events.html">See all events</a></p>
+  </div>
+</section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Williston Park Public Library</p>
+  </footer>
+</body>
+</html>

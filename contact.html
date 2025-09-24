@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us – Williston Park Public Library</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+  <img
+    class="logo"
+    src="images/logo.jpg"            
+    alt="Williston Park Public Library logo">
+  <span class="brand-text">WPPL</span>
+</a>
+
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+        <li><a href="index.html">About WPPL</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="contact-band">  
+  <section class="contact" aria-labelledby="contact-title">
+    <h1 id="contact-title">Contact Us</h1>
+
+    <div class="contact-grid">
+      <!-- Info + Map -->
+      <section class="contact-info" aria-labelledby="info-title">
+        <h2 id="info-title">Library Information</h2>
+
+        <address class="contact-block">
+          <p><strong>Address</strong><br>
+            494 Willis Ave, Williston Park, NY 11596
+          </p>
+          <p><strong>Phone</strong><br>
+            <a href="tel:+15551234567">(555) 123-4567</a>
+          </p>
+          <p><strong>Email</strong><br>
+            <a href="mailto:info@willistonparklibrary.org">info@willistonparklibrary.org</a>
+          </p>
+          <p><strong>Hours</strong><br>
+            Mon–Fri 9:00 AM–6:00 PM
+          </p>
+        </address>
+
+        <figure class="map-figure">
+          <img src="images/map.png"
+               alt="Map showing the library location on Willis Ave in Williston Park">
+          <figcaption>Static map image as a text alternative to an embedded map.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Form -->
+      <section class="contact-form" aria-labelledby="form-title">
+        <h2 id="form-title">Send Us a Message</h2>
+
+        <form id="contactForm" action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required
+                   aria-describedby="name-hint name-error">
+            <small id="name-hint" class="hint">Enter your full name.</small>
+            <p id="name-error" class="error" role="alert" hidden>Please enter your name.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required
+                   aria-describedby="email-hint email-error">
+            <small id="email-hint" class="hint">We’ll only use this to reply.</small>
+            <p id="email-error" class="error" role="alert" hidden>Please enter a valid email.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required
+                      aria-describedby="msg-hint msg-error"></textarea>
+            <small id="msg-hint" class="hint">How can we help?</small>
+            <p id="msg-error" class="error" role="alert" hidden>Please enter a message.</p>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+
+          <!-- live region for overall form feedback -->
+          <p id="form-status" class="sr-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+     </section>
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Williston Park Public Library</p>
+  </footer>
+</body>
+</html>
