@@ -1,8 +1,8 @@
 // ---- Events data (edit this) ----
 const EVENTS = [
-  { id: 'story-time',   title: 'Story Time for Kids',       date: '2025-03-12', time: '10:00 AM', href: 'events.html#story-time' },
-  { id: 'author-talk',  title: 'Author Talk: Local History',date: '2025-03-15', time: '6:30 PM',  href: 'events.html#author-talk' },
-  { id: 'coding-club',  title: 'Kids Coding Club',          date: '2025-03-22', time: '2:00 PM',   href: 'events.html#coding-club' },
+  { id: 'story-time',   title: 'Story Time for Kids',       date: '2025-10-12', time: '10:00 AM', href: 'events.html#story-time' },
+  { id: 'author-talk',  title: 'Author Talk: Local History',date: '2025-10-15', time: '6:30 PM',  href: 'events.html#author-talk' },
+  { id: 'coding-club',  title: 'Kids Coding Club',          date: '2025-10-22', time: '2:00 PM',   href: 'events.html#coding-club' },
 ];
 
 // ---- Calendar rendering ----
@@ -28,7 +28,7 @@ const EVENTS = [
     const y = viewDate.getFullYear();
     const m = viewDate.getMonth(); // 0-11
     const first = new Date(y, m, 1);
-    const firstWeekday = first.getDay(); // 0 (Sun) - 6 (Sat)
+    const firstWeekday = first.getDay(); 
     const daysInMonth = new Date(y, m+1, 0).getDate();
 
     const monthName = first.toLocaleString(undefined, { month: 'long' });

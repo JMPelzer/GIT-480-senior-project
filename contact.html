@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="contact-body">
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -31,81 +31,136 @@
   </div>
 </header>
 
-<main id="main">
-<section class="contact-band">  
-  <section class="contact" aria-labelledby="contact-title">
-    <h1 id="contact-title">Contact Us</h1>
+   <main id="main">
 
-    <div class="contact-grid">
-      <!-- Info + Map -->
-      <section class="contact-info" aria-labelledby="info-title">
-        <h2 id="info-title">Library Information</h2>
+  <div class="contact-band">
+    <section class="contact container" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact Us</h1>
 
-        <address class="contact-block">
-          <p><strong>Address</strong><br>
-            494 Willis Ave, Williston Park, NY 11596
-          </p>
-          <p><strong>Phone</strong><br>
-            <a href="tel:+15551234567">(555) 123-4567</a>
-          </p>
-          <p><strong>Email</strong><br>
-            <a href="mailto:info@willistonparklibrary.org">info@willistonparklibrary.org</a>
-          </p>
-          <p><strong>Hours</strong><br>
-            Mon–Fri 9:00 AM–6:00 PM
-          </p>
-        </address>
+      <div class="contact-grid">
+        <!-- LEFT: info + map -->
+        <section class="contact-info" aria-labelledby="info-title">
+          <h2 id="info-title">Library Information</h2>
 
-        <figure class="map-figure">
-          <img src="images/map.png"
-               alt="Map showing the library location on Willis Ave in Williston Park">
-          <figcaption>Static map image as a text alternative to an embedded map.</figcaption>
-        </figure>
-      </section>
+          <address class="contact-block">
+            <p><strong>Address</strong><br>494 Willis Ave, Williston Park, NY 11596</p>
+            <p><strong>Phone</strong><br>
+              <a href="tel:+15551234567">(555) 123-4567</a>
+            </p>
+            <p><strong>Email</strong><br>
+              <a href="mailto:info@willistonparklibrary.org">info@willistonparklibrary.org</a>
+            </p>
+            <p><strong>Hours</strong><br>Mon–Fri 9:00 AM–6:00 PM</p>
+          </address>
 
-      <!-- Form -->
-      <section class="contact-form" aria-labelledby="form-title">
-        <h2 id="form-title">Send Us a Message</h2>
+          <figure class="map-figure">
+            <img src="images/map.png"
+                 alt="Map showing the library location on Willis Ave in Williston Park">
+            <figcaption>Static map image as a text alternative to an embedded map.</figcaption>
+          </figure>
+        </section>
 
-        <form id="contactForm" action="#" method="post" novalidate>
-          <div class="form-group">
-            <label for="name">Name <span aria-hidden="true">*</span></label>
-            <input id="name" name="name" type="text" autocomplete="name" required
-                   aria-describedby="name-hint name-error">
-            <small id="name-hint" class="hint">Enter your full name.</small>
-            <p id="name-error" class="error" role="alert" hidden>Please enter your name.</p>
-          </div>
+        <!-- RIGHT: form -->
+        <section class="contact-form card" aria-labelledby="form-title">
+          <h2 id="form-title">Send Us a Message</h2>
 
-          <div class="form-group">
-            <label for="email">Email <span aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required
-                   aria-describedby="email-hint email-error">
-            <small id="email-hint" class="hint">We’ll only use this to reply.</small>
-            <p id="email-error" class="error" role="alert" hidden>Please enter a valid email.</p>
-          </div>
+          <form id="contactForm" action="#" method="post" novalidate>
+            <div class="form-group">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input class="input" id="name" name="name" type="text" autocomplete="name" required
+                     aria-describedby="name-hint name-error">
+              <small id="name-hint" class="hint">Enter your full name.</small>
+              <p id="name-error" class="error" role="alert" hidden>Please enter your name.</p>
+            </div>
 
-          <div class="form-group">
-            <label for="message">Message <span aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="5" required
-                      aria-describedby="msg-hint msg-error"></textarea>
-            <small id="msg-hint" class="hint">How can we help?</small>
-            <p id="msg-error" class="error" role="alert" hidden>Please enter a message.</p>
-          </div>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" required
+                     aria-describedby="email-hint email-error">
+              <small id="email-hint" class="hint">We’ll only use this to reply.</small>
+              <p id="email-error" class="error" role="alert" hidden>Please enter a valid email.</p>
+            </div>
 
-          <button type="submit" class="btn">Send Message</button>
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea class="textarea" id="message" name="message" rows="5" required
+                        aria-describedby="msg-hint msg-error"></textarea>
+              <small id="msg-hint" class="hint">How can we help?</small>
+              <p id="msg-error" class="error" role="alert" hidden>Please enter a message.</p>
+            </div>
 
-          <!-- live region for overall form feedback -->
-          <p id="form-status" class="sr-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-    </div>
-     </section>
-  </section>
+            <button type="submit" class="btn">Send Message</button>
+            <p id="form-status" class="sr-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+
+      <!-- Hours + Holidays  -->
+      <div class="hours-holidays" role="group" aria-label="Opening hours and holiday closings">
+        <section class="hours card" aria-labelledby="hours-title">
+          <h2 id="hours-title">Hours</h2>
+          <ul class="hours-list">
+            <li><strong>Sunday:</strong> Closed</li>
+            <li><strong>Monday:</strong> 10:00 am–8:00 pm</li>
+            <li><strong>Tuesday:</strong> 10:00 am–8:00 pm</li>
+            <li><strong>Wednesday:</strong> 10:00 am–8:00 pm</li>
+            <li><strong>Thursday:</strong> 10:00 am–8:00 pm</li>
+            <li><strong>Friday:</strong> 10:00 am–5:00 pm</li>
+            <li><strong>Saturday:</strong> 10:00 am–5:00 pm</li>
+          </ul>
+        </section>
+
+        <section class="holidays card" aria-labelledby="holidays-title">
+          <h2 id="holidays-title">2025 Holiday Closings</h2>
+          <ul class="holiday-list">
+            <li>New Year’s Day — Jan 01</li>
+            <li>Memorial Day — May 26</li>
+            <li>Independence Day — Jul 04 & 05</li>
+            <li>Thanksgiving Break — Nov 27 & 28</li>
+            <li>Christmas Eve — Dec 24</li>
+            <li>Christmas Day — Dec 25 & 26</li>
+          </ul>
+          <p class="holiday-note">*Library closes at 2:00 pm the day before Thanksgiving.</p>
+        </section>
+      </div>
+    </section>
+  </div>
 </main>
+ 
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="copyright">
+     <span>© 2025 Jennifer Pelzer • GIT 480 Senior Project </span>
+    </p>
 
-
-  <footer>
-    <p>&copy; 2025 Williston Park Public Library</p>
-  </footer>
+    <!--Images icons (mock) -->
+    <ul class="footer-social" aria-hidden="true">
+      <li class="social-icon" title="Facebook (mock)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor"
+            d="M22 12.06C22 6.49 17.52 2 11.94 2S2 6.49 2 12.06c0 5.03 3.68 9.2 8.49 9.99v-7.07H8.3v-2.92h2.19V9.64c0-2.16 1.28-3.35 3.24-3.35.94 0 1.93.17 1.93.17v2.13h-1.09c-1.07 0-1.41.67-1.41 1.36v1.63h2.41l-.38 2.92h-2.03v7.07C18.32 21.26 22 17.09 22 12.06z"/>
+        </svg>
+      </li>
+      <li class="social-icon" title="Instagram (mock)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor"
+            d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3Zm0 7.7A3 3 0 1 1 15 12a3 3 0 0 1-3 3Zm5.1-8.82a1.09 1.09 0 1 0 1.09 1.1 1.09 1.09 0 0 0-1.1-1.1ZM12 2.5c-3.3 0-3.7 0-5 .07a6.44 6.44 0 0 0-2.2.42 4.6 4.6 0 0 0-2.61 2.62 6.44 6.44 0 0 0-.42 2.2C1.5 10 1.5 10.4 1.5 13.7s0 3.7.07 5a6.44 6.44 0 0 0 .42 2.2 4.6 4.6 0 0 0 2.62 2.61 6.44 6.44 0 0 0 2.2.42c1.3.07 1.7.07 5 .07s3.7 0 5-.07a6.44 6.44 0 0 0 2.2-.42 4.6 4.6 0 0 0 2.61-2.62 6.44 6.44 0 0 0 .42-2.2c.07-1.3.07-1.7.07-5s0-3.7-.07-5a6.44 6.44 0 0 0-.42-2.2A4.6 4.6 0 0 0 19.2 3a6.44 6.44 0 0 0-2.2-.42C15.7 2.5 15.3 2.5 12 2.5Z"/>
+        </svg>
+      </li>
+      <li class="social-icon" title="X / Twitter (mock)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor"
+            d="M17.53 2H20l-6.2 7.07L21.5 22h-5.8l-4.53-6.2L5.8 22H3.33l6.62-7.54L2.5 2h5.92l4.08 5.57L17.53 2Zm-1.02 18.3h1.59L7.59 3.63H5.94l10.57 16.67Z"/>
+        </svg>
+      </li>
+      <li class="social-icon" title="YouTube (mock)">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor"
+            d="M10 15.5v-7l6 3.5-6 3.5ZM23 7.5a4 4 0 0 0-2.83-2.83C18.2 4.2 12 4.2 12 4.2s-6.2 0-8.17.47A4 4 0 0 0 1 7.5a41.7 41.7 0 0 0 0 9c.24 1.1 1.1 1.96 2.2 2.2C5.2 19.2 12 19.2 12 19.2s6.2 0 8.17-.47A4 4 0 0 0 23 16.5a41.7 41.7 0 0 0 0-9Z"/>
+        </svg>
+      </li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>
