@@ -701,7 +701,7 @@ color: var(--blue);
 
    .brand{ 
     order: 1;
-    flex: 1 0 100%;                /* take full row */
+    flex: 1 0 100%;                
     align-items: center;
     gap: .5rem;
    }
@@ -720,16 +720,16 @@ color: var(--blue);
      display:none;
      } 
 
-       .site-nav{
-    order: 2;                      /* <- apply order to the NAV, not its links */
+  .site-nav{
+    order: 2;                      
     flex: 1 0 100%;
-    margin: 0;                     /* reset desktop margins */
+    margin: 0;                     
     border-top: 1px solid var(--border-2);
   }
   .site-nav ul{
     display: flex;
     width: 100%;
-    justify-content: space-between;   /* or space-evenly */
+    justify-content: space-between;   
     column-gap: 0;
   }
   .site-nav li{ flex: 1 1 0; }
@@ -820,11 +820,11 @@ color: var(--blue);
   }
 
 .cal-grid thead th{ 
-  background:#f5f7fb;
+  background:var(--muted);
   padding:.6rem .5rem;
   text-align:center;
   font-weight:800;
-  color:#445065;
+  color:var(--blue-700);
   border-bottom:1px solid var(--border);
   }
 
@@ -862,19 +862,23 @@ color: var(--blue);
 
 .cal-day .date-num{
    font-weight:800; 
-   color:#263041;
+   color:var(--text);
    }
 
 .cal-day.outside .date-num{ 
-  color:#9aa6b2;
+  color:var(--blue-700);
+  font-weight: 700;
  }
 
-.cal-event{ display:inline-block;
+.cal-event{ 
+  display:block;
   margin-top:.25rem;
-  padding:.1rem .35rem;
+  padding:.15rem .45rem;
   border-radius:.5rem;
-  background:#e7f0ff;
-  color:#0a3b8f;
+  background:var(--muted);
+  color:var(--blue-700);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
   font-size:.8rem;
   font-weight:700;
   }
